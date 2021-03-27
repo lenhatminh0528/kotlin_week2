@@ -64,7 +64,7 @@
                     ></View>
                 <TextView
                     android:layout_weight="1"
-                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginHorizontal="15dp"
                     android:text="sign in with"
                     android:textSize="15dp"
                     android:textColor="@color/colorwhite"
