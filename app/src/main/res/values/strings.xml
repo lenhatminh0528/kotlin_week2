@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">kotlin_week2</string>
+    <string name="sign_in"><u>Sign In</u></string>
+</resources>
