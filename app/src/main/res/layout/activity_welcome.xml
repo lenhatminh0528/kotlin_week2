@@ -44,123 +44,138 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+
         <LinearLayout
-            android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
-            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_marginHorizontal="50dp"
-            android:layout_marginBottom="54dp"
-            android:layout_height="wrap_content">
+            android:layout_marginBottom="41dp"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_height="wrap_content">
+                android:orientation="horizontal">
+
                 <View
-                    android:layout_weight="1"
                     android:layout_width="100dp"
                     android:layout_height="1dp"
-                    android:background="@color/colorwhite"
-                    ></View>
+                    android:layout_weight="1"
+                    android:background="@color/colorwhite"></View>
+
                 <TextView
-                    android:layout_weight="1"
-                    android:layout_marginHorizontal="15dp"
-                    android:text="sign in with"
-                    android:textSize="15dp"
-                    android:textColor="@color/colorwhite"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <View
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
                     android:layout_weight="1"
+                    android:text="sign in with"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="15dp" />
+
+                <View
                     android:layout_width="100dp"
                     android:layout_height="1dp"
-                    android:background="@color/colorwhite"
-                    ></View>
+                    android:layout_weight="1"
+                    android:background="@color/colorwhite"></View>
             </LinearLayout>
+
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="19dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:paddingHorizontal="25dp"
-                    android:paddingVertical="15dp"
-                    android:layout_marginRight="20dp"
-                    android:gravity="center_vertical"
-                    android:background="@drawable/bg_shadow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="23dp"
-                        android:src="@drawable/facebook"
-                        android:layout_height="23dp"/>
-                    <TextView
-                        android:text="FACEBOOK"
-                        android:textSize="13dp"
-                        android:textColor="@color/colorgray900"
-                        android:textStyle="bold"
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:paddingHorizontal="25dp"
-                    android:paddingVertical="15dp"
-                    android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-                    android:background="@drawable/bg_shadow"
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_shadow"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="25dp"
+                    android:paddingVertical="15dp">
+
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="23dp"
-                        android:src="@drawable/google"
-                        android:layout_height="23dp"/>
+                        android:layout_height="23dp"
+                        android:src="@drawable/facebook" />
+
                     <TextView
-                        android:text="GOOGLE"
-                        android:textSize="13dp"
-                        android:textColor="@color/colorgray900"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="FACEBOOK"
+                        android:textColor="@color/colorgray900"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_shadow"
+
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="25dp"
+                    android:paddingVertical="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:src="@drawable/google" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:text="GOOGLE"
+                        android:textColor="@color/colorgray900"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
-                android:background="@drawable/bg_shadow_gray"
-                android:layout_marginTop="41dp"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                android:background="@drawable/bg_shadow_gray"
                 android:gravity="center_horizontal"
                 android:paddingHorizontal="31dp"
-                android:paddingVertical="15dp"
-                android:layout_height="wrap_content">
+                android:paddingVertical="15dp">
+
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Start with email or phone"
                     android:textColor="#FEFEFE"
-                    android:textSize="17dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="17dp" />
             </LinearLayout>
+
             <LinearLayout
-                android:gravity="center_horizontal"
-                android:layout_marginTop="28dp"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:textColor="@color/colorwhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Already have an account?"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textColor="@color/colorwhite" />
+
                 <TextView
-                    android:textColor="@color/colorwhite"
-                    android:text="@string/sign_in"
-                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/sign_in"
+                    android:textColor="@color/colorwhite" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Food Delivery</string>
     <string name="sign_in"><u>Sign In</u></string>
-    <string name="login"><u>Login</u></string>
+    <string name="login">Login</string>
     <string name="login_cap">LOGIN</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
