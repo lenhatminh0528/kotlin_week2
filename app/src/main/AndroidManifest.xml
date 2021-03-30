@@ -11,14 +11,17 @@
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/ob_button" />
-
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".OnboardingActivity"/>
+        <activity android:name=".SignupActivity"/>
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".VerifyCodeActivity"/>
     </application>
 
 </manifest>
