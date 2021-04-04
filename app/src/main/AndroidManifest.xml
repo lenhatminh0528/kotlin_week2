@@ -13,15 +13,23 @@
             android:resource="@xml/ob_button" />
         <activity android:name=".MainActivity"/>
         <activity android:name=".LoginActivity"/>
-        <activity android:name=".OnboardingActivity"/>
+        <activity android:name=".OnBoardingOneActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".OnBoardingTwoActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".OnBoardingThreeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".SignupActivity"/>
-        <activity android:name=".WelcomeActivity">
+        <activity android:name=".WelcomeActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".SplassScreen"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".VerifyCodeActivity"/>
-    </application>
 
+    </application>
 </manifest>

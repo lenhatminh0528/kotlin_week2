@@ -12,7 +12,7 @@
             android:layout_marginTop="25dp"
             android:layout_centerHorizontal="true"
             android:id="@+id/imageView4"
-            android:src="@drawable/onboarding_one"
+            android:src="@drawable/onboarding_two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <ImageView
@@ -20,16 +20,16 @@
             android:layout_below="@id/imageView4"
             android:layout_marginTop="25dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/spot_indicator_one"
+            android:src="@drawable/spot_indicator_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
         <LinearLayout
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@id/imageView3"
             android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -37,32 +37,33 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:fontFamily="sans-serif"
-                android:text="@string/onboarding_one_text1"
+                android:gravity="center_horizontal"
+                android:text="@string/onboarding_two_text1"
                 android:textColor="@color/colorgray900"
                 android:textSize="34dp" />
 
             <TextView
-                android:layout_marginTop="20dp"
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="center_horizontal"
                 android:text="@string/onboarding_text123"
                 android:textSize="16dp" />
 
             <LinearLayout
                 android:id="@+id/btn_next"
-                android:clickable="true"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:gravity="center"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/ob_button"
+                android:clickable="true"
+                android:gravity="center"
                 android:orientation="vertical"
                 android:paddingHorizontal="17dp"
                 android:paddingVertical="17dp">
+
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"

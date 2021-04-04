@@ -4,4 +4,8 @@
     <string name="login">Login</string>
     <string name="login_cap">LOGIN</string>
     <string name="sign_up">Sign Up</string>
+    <string name="onboarding_one_text1">Browse your menu\nand order directly</string>
+    <string name="onboarding_text123">Our app can send you everywhere, even space. For only $2.99 per month</string>
+    <string name="onboarding_two_text1">Even to space with us! Together</string>
+    <string name="onboarding_three_text1">Pickup delivery at\nyour door</string>
 </resources>

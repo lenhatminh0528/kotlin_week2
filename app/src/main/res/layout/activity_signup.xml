@@ -11,10 +11,12 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="27dp"
-            android:layout_marginTop="97dp"
+            android:layout_marginTop="50dp"
             android:orientation="vertical">
 
             <TextView

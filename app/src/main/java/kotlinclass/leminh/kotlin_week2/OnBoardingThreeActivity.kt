@@ -1,22 +1,20 @@
 package kotlinclass.leminh.kotlin_week2
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_welcome.*
+import kotlinx.android.synthetic.main.activity_onboarding_three.*
 
-class WelcomeActivity : AppCompatActivity() {
-    @SuppressLint("ResourceAsColor")
+class OnBoardingThreeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_welcome)
+        setContentView(R.layout.activity_onboarding_three)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-
-        btn_start.setOnClickListener {
-            var it = Intent(this@WelcomeActivity, SignupActivity::class.java)
-            startActivity(it)
+        btn_next.setOnClickListener {
+            var intent = Intent(this@OnBoardingThreeActivity, WelcomeActivity::class.java)
+            startActivity(intent)
         }
     }
 }
