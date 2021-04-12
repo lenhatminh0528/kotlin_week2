@@ -15,7 +15,7 @@ class WelcomeActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         btn_start.setOnClickListener {
-            var it = Intent(this@WelcomeActivity, SignupActivity::class.java)
+            var it = Intent(this@WelcomeActivity,SignupActivity::class.java)
             startActivity(it)
         }
     }

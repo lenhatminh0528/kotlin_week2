@@ -5,45 +5,58 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import kotlinclass.leminh.kotlin_week2.databinding.ActivityLoginBinding
 import kotlinx.android.synthetic.main.activity_login.*
+import org.w3c.dom.Text
 import utils.DialogUtils
 
 class LoginActivity: AppCompatActivity() {
     @SuppressLint("ResourceAsColor")
+    lateinit var binding : ActivityLoginBinding
+    lateinit var viewmodel : LoginViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        btn_login.setOnClickListener{
-            var email: String = edt_email.text.toString()
-            var pass : String = edt_password.text.toString()
-            //Toast.makeText(this,"email: "+email+", pass: "+pass+" ",Toast.LENGTH_LONG).show()
-            var builder = AlertDialog.Builder(this)
-            if (email.equals("ronaldo@gmail.com") && pass.equals("123456")){
-//                var intent = Intent(this@LoginActivity, VerifyCodeActivity::class.java)
-//                startActivity(intent)
-                builder.apply {
-                    setMessage("Login successful!")
-                    setPositiveButton("OK"){dialog,_->
-                        var intent = Intent(this@LoginActivity, ProfileActivity::class.java)
-                        startActivity(intent)
-                        dialog.dismiss()
-                    }
-                }
-            }else{
-                builder.apply {
-                    setMessage("Login failed!")
-                    setPositiveButton("OK"){dialog,_->
-                        dialog.dismiss()
-                    }
-                }
-            }
-            Handler(Looper.getMainLooper()).post{
-                builder.show()
+        setUp()
+        binding.apply {
+            btnSignup.setOnClickListener{
+                gotoSignUp()
             }
         }
+        viewmodel.isSuccess.observe(this, Observer {
+            if(it){
+                Toast.makeText(this, " Sign in successful!",Toast.LENGTH_LONG).show()
+                gotoProfile()
+            }
+        })
+        viewmodel.isError.observe(this, Observer { message ->
+            Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+        })
+    }
+    fun setUp(){
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_login)
+        viewmodel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        binding.lifecycleOwner = this
+        binding.loginViewModel = viewmodel
+    }
+    fun gotoProfile(){
+        var intent = Intent(this@LoginActivity, ProfileActivity::class.java)
+        var user = Account("",binding.edtEmail.text.toString(),binding.edtPassword.text.toString(),"")
+        intent.putExtra("user",user)
+        startActivity(intent)
+    }
+    fun gotoSignUp(){
+        var intent = Intent(this@LoginActivity, SignupActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

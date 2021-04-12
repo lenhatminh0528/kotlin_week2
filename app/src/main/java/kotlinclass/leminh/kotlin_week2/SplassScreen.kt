@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+
 @Suppress("DEPRECATION")
 class SplassScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +16,7 @@ class SplassScreen : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         Handler().postDelayed({
-            var intent = Intent(this@SplassScreen,OnBoardingOneActivity::class.java)
+            var intent = Intent(this@SplassScreen, SignupActivity::class.java)
             startActivity(intent)
             finish()
         },3000)
