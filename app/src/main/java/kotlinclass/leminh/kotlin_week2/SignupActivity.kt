@@ -6,21 +6,22 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import kotlinclass.leminh.kotlin_week2.databinding.ActivitySignupBinding
 import kotlinx.android.synthetic.main.activity_signup.*
 
-class SignupActivity: AppCompatActivity() {
-    @SuppressLint("ResourceAsColor")
+class SignupActivity: AppCompatActivity(){
+    private lateinit var binding : ActivitySignupBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_signup)
+        //setContentView(R.layout.activity_signup)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
-        edt_email.clearFocus()
-        edt_fullname.clearFocus()
-        edt_password.clearFocus()
-        btn_signup.setOnClickListener{
-            var it = Intent(this@SignupActivity, LoginActivity::class.java)
-            startActivity(it)
+        binding.apply {
+            btnSignup.setOnClickListener {
+                edt_fullname
+            }
         }
     }
 }

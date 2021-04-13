@@ -22,7 +22,7 @@
         <activity android:name=".SignupActivity"/>
         <activity android:name=".WelcomeActivity"/>
         <activity android:name=".ProfileActivity"/>
-        <activity android:name=".SplassScreen"
+        <activity android:name=".SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

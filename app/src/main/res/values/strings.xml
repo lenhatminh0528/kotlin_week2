@@ -8,4 +8,13 @@
     <string name="onboarding_text123">Our app can send you everywhere, even space. For only $2.99 per month</string>
     <string name="onboarding_two_text1">Even to space with us! Together</string>
     <string name="onboarding_three_text1">Pickup delivery at\nyour door</string>
+    <string name="sign_up_tv">Sign up</string>
+    <string name="full_name">Full name</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="buttonSign_up">SIGN UP</string>
+    <string name="ask_for_account">Already have an account?</string>
+    <string name="sign_up_with">sign up with</string>
+    <string name="facebook">FACEBOOK</string>
+    <string name="google">GOOGLE</string>
 </resources>

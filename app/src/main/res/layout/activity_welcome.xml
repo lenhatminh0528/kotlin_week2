@@ -22,7 +22,7 @@
                     android:text="Skip"
                     android:textStyle="bold"
                     android:textSize="15dp"
-                    android:textColor="@color/colororange"
+                    android:textColor="@color/colorOrange"
                     android:paddingHorizontal="15dp"
                     android:paddingVertical="10dp"
                     android:layout_width="wrap_content"
@@ -80,7 +80,7 @@
                         android:layout_width="100dp"
                         android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:background="@color/colorwhite"></View>
+                        android:background="@color/colorWhite"></View>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -88,14 +88,14 @@
                         android:layout_marginHorizontal="15dp"
                         android:layout_weight="1"
                         android:text="sign in with"
-                        android:textColor="@color/colorwhite"
+                        android:textColor="@color/colorWhite"
                         android:textSize="15dp" />
 
                     <View
                         android:layout_width="100dp"
                         android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:background="@color/colorwhite"></View>
+                        android:background="@color/colorWhite"></View>
                 </LinearLayout>
 
                 <LinearLayout
@@ -125,7 +125,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
                             android:text="FACEBOOK"
-                            android:textColor="@color/colorgray900"
+                            android:textColor="@color/gray900"
                             android:textSize="13dp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -150,7 +150,7 @@
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="10dp"
                             android:text="GOOGLE"
-                            android:textColor="@color/colorgray900"
+                            android:textColor="@color/gray900"
                             android:textSize="13dp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -186,14 +186,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Already have an account?"
-                        android:textColor="@color/colorwhite" />
+                        android:textColor="@color/colorWhite" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:text="@string/sign_in"
-                        android:textColor="@color/colorwhite" />
+                        android:textColor="@color/colorWhite" />
                 </LinearLayout>
             </LinearLayout>
 

@@ -6,7 +6,7 @@ import android.os.Handler
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 @Suppress("DEPRECATION")
-class SplassScreen : AppCompatActivity() {
+class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splass_screen)
@@ -15,9 +15,9 @@ class SplassScreen : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         Handler().postDelayed({
-            var intent = Intent(this@SplassScreen,OnBoardingOneActivity::class.java)
+            val intent = Intent(this@SplashScreen,OnBoardingOneActivity::class.java)
             startActivity(intent)
             finish()
-        },3000)
+        },100)
     }
 }

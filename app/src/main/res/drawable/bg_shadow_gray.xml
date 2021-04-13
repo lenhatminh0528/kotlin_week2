@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <corners android:radius="80dp"/>
     <solid
-        android:color="@color/colorgray400"
+        android:color="@color/gray400"
         />
 
 </shape>

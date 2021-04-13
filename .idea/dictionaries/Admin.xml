@@ -2,6 +2,7 @@
   <dictionary name="Admin">
     <words>
       <w>fullname</w>
+      <w>signup</w>
     </words>
   </dictionary>
 </component>

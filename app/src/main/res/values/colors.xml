@@ -3,13 +3,13 @@
     <color name="colorPrimary">#D8D2E1</color>
     <color name="colorPrimaryDark">#D2CFD8</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="colorgray400">#BDBDBD</color>
+    <color name="gray400">#BDBDBD</color>
     <color name="colorBreakLine">#BDBDBD</color>
-    <color name="graysteel">#777B7E</color>
+    <color name="gray_steel">#777B7E</color>
     <color name="colorgray200">#EEEEEE</color>
     <color name="colorgray800">#424242</color>
-    <color name="colorgray900">#212121</color>
-    <color name="colorwhite">#ffffff</color>
-    <color name="colororange">#FE724C</color>
+    <color name="gray900">#212121</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorOrange">#FE724C</color>
 
 </resources>

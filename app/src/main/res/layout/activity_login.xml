@@ -52,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="E-mail"
-                    android:textColor="@color/graysteel"
+                    android:textColor="@color/gray_steel"
                     android:textSize="16dp" />
 
                 <LinearLayout
@@ -82,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Password"
-                    android:textColor="@color/graysteel"
+                    android:textColor="@color/gray_steel"
                     android:textSize="16dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -111,7 +111,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="15dp"
                     android:text="Forgot password?"
-                    android:textColor="@color/colororange" />
+                    android:textColor="@color/colorOrange" />
             </LinearLayout>
 
             <LinearLayout
@@ -129,7 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/login_cap"
-                    android:textColor="@color/colorwhite"
+                    android:textColor="@color/colorWhite"
                     android:textSize="18dp" />
             </LinearLayout>
 
@@ -144,7 +144,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Don't have an account?"
-                    android:textColor="@color/colorgray900"
+                    android:textColor="@color/gray900"
                     android:textSize="12dp" />
 
                 <TextView
@@ -152,7 +152,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:text="@string/sign_up"
-                    android:textColor="@color/colororange" />
+                    android:textColor="@color/colorOrange" />
             </LinearLayout>
 
             <LinearLayout
@@ -166,7 +166,7 @@
                     android:layout_width="100dp"
                     android:layout_height="1dp"
                     android:layout_weight="1"
-                    android:background="@color/colorgray400"></View>
+                    android:background="@color/gray400"></View>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -175,14 +175,14 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:text="Sign in with"
-                    android:textColor="@color/colorgray900"
+                    android:textColor="@color/gray900"
                     android:textSize="15dp" />
 
                 <View
                     android:layout_width="100dp"
                     android:layout_height="1dp"
                     android:layout_weight="1"
-                    android:background="@color/colorgray400"></View>
+                    android:background="@color/gray400"></View>
             </LinearLayout>
 
             <LinearLayout
@@ -213,7 +213,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="FACEBOOK"
-                        android:textColor="@color/colorgray900"
+                        android:textColor="@color/gray900"
                         android:textSize="13dp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -239,7 +239,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="10dp"
                         android:text="GOOGLE"
-                        android:textColor="@color/colorgray900"
+                        android:textColor="@color/gray900"
                         android:textSize="13dp"
                         android:textStyle="bold" />
                 </LinearLayout>

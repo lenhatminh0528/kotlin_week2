@@ -5,8 +5,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <corners android:radius="10dp"/>
     <gradient
-        android:startColor="@color/colorwhite"
-        android:centerColor="@color/colorwhite"
-        android:endColor="@color/colorwhite"
+        android:startColor="@color/colorWhite"
+        android:centerColor="@color/colorWhite"
+        android:endColor="@color/colorWhite"
         ></gradient>
 </shape>
