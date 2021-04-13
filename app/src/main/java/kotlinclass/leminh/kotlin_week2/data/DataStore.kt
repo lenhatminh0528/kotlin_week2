@@ -52,17 +52,22 @@ class DataStore private constructor(){
         }
     }
     fun signIn(email:String, password:String){
-        if(email.isEmpty() or password.isEmpty()){
-            signInCallback.onFailed("Empty field!")
+        if(userList.isEmpty()){
+            signInCallback.onFailed("Empty data!")
         }else{
-            for(user in userList){
-                if(user.email.equals(email) and user.password.equals(password)){
-                    signInCallback.onSuccess()
-                }else{
-                    signInCallback.onFailed("Email or password are incorrect!")
+            if(email.isEmpty() or password.isEmpty()){
+                signInCallback.onFailed("Empty field!")
+            }else{
+                for(user in userList){
+                    if(user.email.equals(email) and user.password.equals(password)){
+                        signInCallback.onSuccess()
+                    }else{
+                        signInCallback.onFailed("Email or password are incorrect!")
+                    }
                 }
             }
         }
+
     }
 
     fun edit(email:String,type: Int,data: String){

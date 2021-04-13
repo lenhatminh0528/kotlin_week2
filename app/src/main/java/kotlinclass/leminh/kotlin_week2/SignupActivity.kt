@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -25,16 +26,24 @@ class SignupActivity: AppCompatActivity() {
             btnSignin.setOnClickListener{
                 goToSignIn()
             }
-            invalidateAll()
+//            invalidateAll()
         }
         viewmodel.isSuccess.observe(this , Observer {
-            if(it){
-                Toast.makeText(this,"Signup successful!",Toast.LENGTH_LONG).show()
-                goToSignIn()
+            Log.d("TAG","go to signup isSuccess viewmodel")
+            it?.let{
+                if(it){
+                    Log.d("TAG","go to signup viewmodel $it")
+                    Toast.makeText(this,"Signup successful!",Toast.LENGTH_LONG).show()
+                    goToSignIn()
+                }
             }
         })
         viewmodel.isError.observe(this, Observer { message ->
-            Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+            Log.d("TAG","go to signup isError viewmodel: $message")
+            message?.let{
+                Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+            }
+
         })
     }
     fun setUp(){
@@ -47,5 +56,11 @@ class SignupActivity: AppCompatActivity() {
     fun goToSignIn(){
         intent = Intent(this@SignupActivity,LoginActivity::class.java)
         startActivity(intent)
+        finish()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        viewmodel.clear()
     }
 }

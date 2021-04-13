@@ -9,10 +9,11 @@
             type="kotlinclass.leminh.kotlin_week2.SignupViewModel" />
     </data>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:focusable="true"
+        android:fillViewport="true"
         android:background="@drawable/login_signup"
         android:focusableInTouchMode="true">
 
@@ -271,5 +272,5 @@
             </LinearLayout>
 
         </RelativeLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </layout>

@@ -12,7 +12,10 @@ class LoginViewModel : ViewModel() {
     init{
         user.value = Account()
     }
-
+    fun clear(){
+        isError.value = null
+        isSuccess.value = null
+    }
     fun signIn(){
         var dataStore = DataStore.instance
         dataStore.setSignInCallback(object : DataStore.SignInCallback{

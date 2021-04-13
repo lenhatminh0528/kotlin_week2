@@ -20,7 +20,7 @@ class ProfileViewModel : ViewModel() {
         var user = dataStore.getUserByEmail(email)
         user?.let{ user->
             this.user.value = user
-//            this.user.postValue(this.user.value)
+            this.user.postValue(this.user.value)
         }
     }
 

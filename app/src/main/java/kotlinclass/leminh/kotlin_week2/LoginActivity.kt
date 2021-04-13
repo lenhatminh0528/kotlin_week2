@@ -32,13 +32,17 @@ class LoginActivity: AppCompatActivity() {
             }
         }
         viewmodel.isSuccess.observe(this, Observer {
-            if(it){
-                Toast.makeText(this, " Sign in successful!",Toast.LENGTH_LONG).show()
-                gotoProfile()
+            it?.let{
+                if(it){
+                    Toast.makeText(this, " Sign in successful!",Toast.LENGTH_LONG).show()
+                    gotoProfile()
+                }
             }
         })
         viewmodel.isError.observe(this, Observer { message ->
-            Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+            message?.let{
+                Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+            }
         })
     }
     fun setUp(){
@@ -58,5 +62,10 @@ class LoginActivity: AppCompatActivity() {
         var intent = Intent(this@LoginActivity, SignupActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        viewmodel.clear()
     }
 }
