@@ -47,6 +47,7 @@
                 android:layout_height="wrap_content">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/icon_avatar"
                     android:src="@drawable/avatar"
                     android:layout_width="120dp"
                     android:layout_height="120dp" />
@@ -76,9 +77,10 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_name"
                     android:textStyle="bold"
                     android:textSize="20dp"
-                    android:text="Eljad Eendaz"
+                    android:text="@={ProfileViewModel.user.fullname}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 

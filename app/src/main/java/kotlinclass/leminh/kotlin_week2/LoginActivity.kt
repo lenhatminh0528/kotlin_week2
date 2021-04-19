@@ -53,7 +53,7 @@ class LoginActivity: AppCompatActivity() {
         binding.loginViewModel = viewmodel
     }
     fun gotoProfile(){
-        var intent = Intent(this@LoginActivity, ProfileActivity::class.java)
+        var intent = Intent(this@LoginActivity, ListRestaurantActivity::class.java)
         var user = Account("",binding.edtEmail.text.toString(),binding.edtPassword.text.toString(),"")
         intent.putExtra("user",user)
         startActivity(intent)
