@@ -19,6 +19,6 @@ class SplassScreen : AppCompatActivity() {
             var intent = Intent(this@SplassScreen, SignupActivity::class.java)
             startActivity(intent)
             finish()
-        },3000)
+        },500)
     }
 }
