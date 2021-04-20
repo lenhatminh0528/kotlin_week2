@@ -52,6 +52,16 @@ class LinearFragment: Fragment() {
                 image = itemView.findViewById(R.id.image)
             }
 
+            fun bind(item:Restaurant){
+                tv_address.text = item.address
+                tv_name.text =  item.name
+                Glide.with(itemView.context)
+                    .load(item.avatar)
+                    .centerCrop()
+                    .placeholder(R.drawable.ic_baseline_image_24)
+                    .into(image)
+            }
+
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -60,13 +70,10 @@ class LinearFragment: Fragment() {
         }
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            holder.tv_address.text = list[position].address
-            holder.tv_name.text = list[position].name
-            Glide.with(context)
-            .load(list[position].avatar)
-            .centerCrop()
-            .placeholder(R.drawable.ic_baseline_image_24)
-            .into(holder.image);
+            val item = list[position]
+            holder.bind(item)
+
+
         }
 
         override fun getItemCount(): Int {
