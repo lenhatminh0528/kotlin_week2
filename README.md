@@ -1,3 +1,3 @@
 # kotlin_week2
-# Challenge Week 2
-<img src="video-1617614678.gif" width="800" height="600"/>
+# Challenge Week 4
+<img src="K17-Team7-Week4.gif" width="800" height="600"/>
