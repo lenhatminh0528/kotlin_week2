@@ -1,7 +1,8 @@
-package kotlinclass.leminh.kotlin_week2
+package kotlinclass.leminh.kotlin_week2.signup
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import kotlinclass.leminh.kotlin_week2.Account
 import kotlinclass.leminh.kotlin_week2.data.DataStore
 
 class SignupViewModel : ViewModel() {

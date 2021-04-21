@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import kotlinclass.leminh.kotlin_week2.signup.SignupActivity
 
 @Suppress("DEPRECATION")
 class SplassScreen : AppCompatActivity() {

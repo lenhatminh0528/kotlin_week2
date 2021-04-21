@@ -6,7 +6,7 @@
     <data>
         <variable
             name="SignupViewModel"
-            type="kotlinclass.leminh.kotlin_week2.SignupViewModel" />
+            type="kotlinclass.leminh.kotlin_week2.signup.SignupViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView

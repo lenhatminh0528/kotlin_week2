@@ -3,21 +3,15 @@ package kotlinclass.leminh.kotlin_week2
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kotlinclass.leminh.kotlin_week2.databinding.ActivityLoginBinding
+import kotlinclass.leminh.kotlin_week2.signup.SignupActivity
 import kotlinx.android.synthetic.main.activity_login.*
-import org.w3c.dom.Text
-import utils.DialogUtils
 
 class LoginActivity: AppCompatActivity() {
     @SuppressLint("ResourceAsColor")

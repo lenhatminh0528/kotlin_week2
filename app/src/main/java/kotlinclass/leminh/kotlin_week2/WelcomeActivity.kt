@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import kotlinclass.leminh.kotlin_week2.signup.SignupActivity
 import kotlinx.android.synthetic.main.activity_welcome.*
 
 class WelcomeActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class WelcomeActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         btn_start.setOnClickListener {
-            var it = Intent(this@WelcomeActivity,SignupActivity::class.java)
+            var it = Intent(this@WelcomeActivity, SignupActivity::class.java)
             startActivity(it)
         }
     }
