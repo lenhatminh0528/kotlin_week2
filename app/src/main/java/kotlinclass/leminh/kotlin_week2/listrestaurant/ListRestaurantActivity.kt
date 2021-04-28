@@ -1,23 +1,18 @@
-package kotlinclass.leminh.kotlin_week2
+package kotlinclass.leminh.kotlin_week2.listrestaurant
 
 import android.content.Context
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.*
 import android.widget.TextView
-import android.widget.Toast
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.google.android.material.tabs.TabLayout
 import de.hdodenhof.circleimageview.CircleImageView
+import kotlinclass.leminh.kotlin_week2.R
+import kotlinclass.leminh.kotlin_week2.Restaurant
 import kotlinclass.leminh.kotlin_week2.data.DataStore
-import kotlinclass.leminh.kotlin_week2.fragment.GridFragment
-import kotlinclass.leminh.kotlin_week2.fragment.LinearFragment
-import kotlinclass.leminh.kotlin_week2.fragment.ViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_list_restaurant.*
 
 class ListRestaurantActivity : AppCompatActivity(){
@@ -89,7 +84,7 @@ class RestaurantAdapter(private var context: Context, private var list: List<Res
             image = itemView.findViewById(R.id.image)
         }
 
-        fun bind(item:Restaurant){
+        fun bind(item: Restaurant){
             tv_address.text = item.address
             tv_name.text =  item.name
             Glide.with(itemView.context)

@@ -5,13 +5,21 @@ import android.util.Log
 import android.util.Patterns
 import kotlinclass.leminh.kotlin_week2.Account
 import kotlinclass.leminh.kotlin_week2.Restaurant
+import java.util.*
 import java.util.regex.Pattern
+import kotlin.collections.ArrayList
 
 class DataStore private constructor(){
     private var userList = ArrayList<Account>()
     private var restaurantList = ArrayList<Restaurant>()
+    var checkRestaurantList = BooleanArray(getData().size)
+    var favoriteList = ArrayList<Restaurant>()
     private lateinit var signUpCallBack: SignUpCallback
     private lateinit var signInCallback: SignInCallback
+
+    init{
+        Arrays.fill(checkRestaurantList, false)
+    }
 
     enum class TYPE(val value: Int){
         USERNAME(1)
@@ -21,6 +29,23 @@ class DataStore private constructor(){
 
     companion object{
         var instance = DataStore()
+    }
+
+    fun updateCheckList(pos: Int, value: Boolean){
+        checkRestaurantList.set(pos,value)
+    }
+
+    fun addToFavorite(restaurant: Restaurant){
+        favoriteList.add(restaurant)
+    }
+
+    fun removeFavorite(restaurant: Restaurant){
+        for(i in favoriteList.indices){
+            if(favoriteList[i].name.equals(restaurant.name)){
+                favoriteList.removeAt(i)
+                break
+            }
+        }
     }
 
     fun getData(): List<Restaurant> {

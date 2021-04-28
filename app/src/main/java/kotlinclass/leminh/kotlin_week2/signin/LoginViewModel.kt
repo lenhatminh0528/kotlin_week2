@@ -1,13 +1,14 @@
-package kotlinclass.leminh.kotlin_week2
+package kotlinclass.leminh.kotlin_week2.signin
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import kotlinclass.leminh.kotlin_week2.Account
 import kotlinclass.leminh.kotlin_week2.data.DataStore
 
 class LoginViewModel : ViewModel() {
     var user = MutableLiveData<Account>()
-    var isSuccess = MutableLiveData<Boolean>()
-    var isError = MutableLiveData<String>()
+    var isSuccess = MutableLiveData<Boolean?>()
+    var isError = MutableLiveData<String?>()
 
     init{
         user.value = Account()

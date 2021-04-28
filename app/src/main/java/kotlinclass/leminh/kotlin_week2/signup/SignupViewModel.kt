@@ -7,8 +7,8 @@ import kotlinclass.leminh.kotlin_week2.data.DataStore
 
 class SignupViewModel : ViewModel() {
     var user = MutableLiveData<Account>()
-    var isSuccess = MutableLiveData<Boolean>()
-    var isError = MutableLiveData<String>()
+    var isSuccess = MutableLiveData<Boolean?>()
+    var isError = MutableLiveData<String?>()
 
     init{
         user.value = Account()

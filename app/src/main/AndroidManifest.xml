@@ -14,21 +14,16 @@
             android:name="com.google.android.actions"
             android:resource="@xml/ob_button" />
         <activity android:name=".MainActivity"/>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".OnBoardingOneActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".OnBoardingTwoActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".OnBoardingThreeActivity"
+        <activity android:name=".signin.LoginActivity"/>
+        <activity android:name=".OnBoarding.OnBoardingThreeFragment"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".signup.SignupActivity"/>
-        <activity android:name=".WelcomeActivity"/>
+        <activity android:name=".WelcomeFragment"/>
         <activity android:name=".ProfileActivity">
-
         </activity>
-        <activity android:name=".ListRestaurantActivity">
-
+        <activity android:name=".listrestaurant.ListRestaurantActivity">
         </activity>
+        <activity android:name=".OnBoarding.OnBoardingActivity"/>
         <activity android:name=".SplassScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

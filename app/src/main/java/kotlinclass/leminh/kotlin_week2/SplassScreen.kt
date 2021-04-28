@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import kotlinclass.leminh.kotlin_week2.OnBoarding.OnBoardingActivity
 import kotlinclass.leminh.kotlin_week2.signup.SignupActivity
 
 @Suppress("DEPRECATION")
@@ -17,7 +18,7 @@ class SplassScreen : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         Handler().postDelayed({
-            var intent = Intent(this@SplassScreen, SignupActivity::class.java)
+            var intent = Intent(this@SplassScreen, OnBoardingActivity::class.java)
             startActivity(intent)
             finish()
         },3000)
