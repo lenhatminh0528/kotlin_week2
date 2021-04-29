@@ -13,6 +13,10 @@ import kotlinclass.leminh.kotlin_week2.WelcomeFragment
 
 class OnBoardingThreeFragment : Fragment() {
     lateinit var btn_next: LinearLayout
+//    override fun onSaveInstanceState(outState: Bundle) {
+//        outState.putInt("currentFragment",3)
+//        super.onSaveInstanceState(outState)
+//    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
