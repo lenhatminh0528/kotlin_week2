@@ -15,13 +15,12 @@
             android:resource="@xml/ob_button" />
         <activity android:name=".MainActivity"/>
         <activity android:name=".signin.LoginActivity"/>
-        <activity android:name=".OnBoarding.OnBoardingThreeFragment"
-            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".signup.SignupActivity"/>
-        <activity android:name=".WelcomeFragment"/>
-        <activity android:name=".ProfileActivity">
+        <activity android:name=".profile.ProfileActivity">
         </activity>
-        <activity android:name=".listrestaurant.ListRestaurantActivity">
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".listrestaurant.ListRestaurantActivity">
         </activity>
         <activity android:name=".OnBoarding.OnBoardingActivity"/>
         <activity android:name=".SplassScreen"

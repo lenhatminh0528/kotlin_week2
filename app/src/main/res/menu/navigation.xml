@@ -4,12 +4,12 @@
     <item
         android:id="@+id/navigation_top"
         android:icon="@drawable/ic_house"
-        android:title="Top"/>
+        android:title="Now Playing"/>
 
     <item
         android:id="@+id/navigation_favorite"
         android:icon="@drawable/ic_destop"
-        android:title="Favorite"/>
+        android:title="Top Rated"/>
 
 
 </menu>

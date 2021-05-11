@@ -9,7 +9,7 @@ import kotlinclass.leminh.kotlin_week2.data.DataStore
 import java.util.*
 import kotlin.collections.ArrayList
 
-class FavoriteViewModel: ViewModel() {
+class TopRateViewModel: ViewModel() {
     var favoriteList =  MutableLiveData<ArrayList<Restaurant>>()
     var listFavoriteCheck = MutableLiveData<BooleanArray>()
     private var dataStore = DataStore.instance

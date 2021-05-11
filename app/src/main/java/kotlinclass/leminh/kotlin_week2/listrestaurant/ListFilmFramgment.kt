@@ -1,25 +1,15 @@
 package kotlinclass.leminh.kotlin_week2.listrestaurant
 
-import android.app.ActionBar
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import androidx.fragment.app.replace
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager.widget.ViewPager
-import com.bumptech.glide.manager.SupportRequestManagerFragment
-import com.bumptech.glide.request.transition.Transition
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinclass.leminh.kotlin_week2.R
 
-class ListRestaurantFramgment: Fragment() {
-//    lateinit var mAdapter : ViewPagerAdapter
-//    lateinit var viewpager: ViewPager
+class ListFilmFramgment: Fragment() {
     lateinit var navigateview : BottomNavigationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,14 +26,14 @@ class ListRestaurantFramgment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        changeFragment(TopFragment())
+        changeFragment(NowPlayingFragment())
         navigateview.setOnNavigationItemSelectedListener {item ->
             when(item.itemId){
                 R.id.navigation_top ->{
-                    changeFragment(TopFragment())
+                    changeFragment(NowPlayingFragment())
                 }
                 R.id.navigation_favorite -> {
-                    changeFragment(FavoriteFragment())
+                    changeFragment(TopRateFragment())
                 }
             }
             true

@@ -1,14 +1,14 @@
 package kotlinclass.leminh.kotlin_week2.listrestaurant
 
 import android.content.Context
-import android.opengl.Visibility
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.PopupMenu
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,16 +18,15 @@ import de.hdodenhof.circleimageview.CircleImageView
 import kotlinclass.leminh.kotlin_week2.R
 import kotlinclass.leminh.kotlin_week2.Restaurant
 import kotlinclass.leminh.kotlin_week2.data.DataStore
-import kotlinx.android.synthetic.main.item_linear_layout_restaurant.*
-import java.util.*
 
-class FavoriteFragment: Fragment() {
+class TopRateFragment: Fragment() {
     lateinit var recyclerView: RecyclerView
-    lateinit private var viewModel : FavoriteViewModel
-    lateinit var madapter: RestaurantAdapter
+    lateinit var btnmore : LinearLayout
+    lateinit private var viewModel : TopRateViewModel
+    lateinit var madapter: TopRateAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(FavoriteViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(TopRateViewModel::class.java)
     }
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,41 +35,46 @@ class FavoriteFragment: Fragment() {
     ): View? {
         var view = inflater.inflate(R.layout.fragment_favorite,container,false)
         recyclerView = view.findViewById(R.id.recyclerview)
+        btnmore = view.findViewById(R.id.btn_more)
+        setupRecycleView()
+        btnmore.setOnClickListener {
+            var popupMenu = PopupMenu(requireActivity(),btnmore)
+            popupMenu.menuInflater.inflate(R.menu.menu_restaurant,popupMenu.menu)
+            popupMenu.setOnMenuItemClickListener {
+                when(it.itemId){
+                    R.id.linear ->
+                        Toast.makeText(requireContext(),"CC", Toast.LENGTH_LONG).show()
+                    R.id.grid ->
+                        Toast.makeText(requireContext(),"CC", Toast.LENGTH_LONG).show()
+                }
+                true
+            }
+            popupMenu.show()
+        }
+        return view
+    }
+    fun setupRecycleView(){
         viewModel.favoriteList.value = DataStore.instance.favoriteList
         viewModel.favoriteList.value?.let {
-//            Log.d("TAG","favoriteList has value ${viewModel.favoriteList.value!!.get(0)}")
-            madapter = RestaurantAdapter(requireContext(), viewModel.favoriteList.value!!)
+            madapter = TopRateAdapter(requireContext(), viewModel.favoriteList.value!!)
             var mLayoutManager : RecyclerView.LayoutManager = LinearLayoutManager(requireContext())
             recyclerView.apply {
                 adapter = madapter
                 layoutManager = mLayoutManager
             }
         }
-
-        return view
     }
 
-    override fun onResume() {
-        super.onResume()
-        viewModel.favoriteList.observe(requireActivity(), androidx.lifecycle.Observer {
-            madapter.notifyDataSetChanged()
-        })
-        viewModel.listFavoriteCheck.observe(requireActivity(), androidx.lifecycle.Observer {
-        })
-    }
-    class RestaurantAdapter(private var context: Context, private var list: List<Restaurant>):
-        RecyclerView.Adapter<RestaurantAdapter.ViewHolder>() {
+    class TopRateAdapter(private var context: Context, private var list: List<Restaurant>):
+        RecyclerView.Adapter<TopRateAdapter.ViewHolder>() {
         class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             var tv_name: TextView
             var tv_address: TextView
             var image: CircleImageView
-            var ic_favorite: ImageView
             init{
                 tv_name = itemView.findViewById(R.id.tv_name)
                 tv_address = itemView.findViewById(R.id.tv_address)
                 image = itemView.findViewById(R.id.image)
-                ic_favorite = itemView.findViewById(R.id.ic_favorite)
-                ic_favorite.visibility = View.GONE
             }
 
             fun bind(item: Restaurant){

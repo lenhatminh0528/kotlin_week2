@@ -5,7 +5,7 @@
     <data>
         <variable
             name="ProfileViewModel"
-            type="kotlinclass.leminh.kotlin_week2.ProfileViewModel" />
+            type="kotlinclass.leminh.kotlin_week2.profile.ProfileViewModel" />
     </data>
 
     <ScrollView

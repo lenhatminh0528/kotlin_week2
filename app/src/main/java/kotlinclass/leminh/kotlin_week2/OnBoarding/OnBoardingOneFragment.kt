@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import kotlinclass.leminh.kotlin_week2.R
@@ -26,6 +27,7 @@ class OnBoardingOneFragment : Fragment() {
         super.onResume()
         btn_next.setOnClickListener {
             parentFragmentManager.commit {
+                setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                 setReorderingAllowed(true)
                 replace<OnBoardingTwoFragment>(R.id.fg_content)
                 addToBackStack(null)

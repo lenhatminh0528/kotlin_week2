@@ -1,25 +1,17 @@
-package kotlinclass.leminh.kotlin_week2
+package kotlinclass.leminh.kotlin_week2.profile
 
-import android.net.Uri
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.provider.ContactsContract
-import android.text.Layout
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.WindowManager
 import android.widget.EditText
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.bumptech.glide.Glide
-import com.bumptech.glide.GlideBuilder
-import com.bumptech.glide.module.AppGlideModule
-import de.hdodenhof.circleimageview.CircleImageView
+import kotlinclass.leminh.kotlin_week2.Account
+import kotlinclass.leminh.kotlin_week2.R
 import kotlinclass.leminh.kotlin_week2.data.DataStore
 import kotlinclass.leminh.kotlin_week2.databinding.ActivityProfileBinding
 import kotlinx.android.synthetic.main.activity_profile.*
@@ -88,7 +80,7 @@ class ProfileActivity : AppCompatActivity() {
     }
     fun setUp(){
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_profile)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_profile)
         viewmodel = ViewModelProvider(this).get(ProfileViewModel::class.java)
         binding.lifecycleOwner = this
         binding.profileViewModel = viewmodel

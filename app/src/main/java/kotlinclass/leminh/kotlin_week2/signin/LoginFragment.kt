@@ -1,6 +1,5 @@
 package kotlinclass.leminh.kotlin_week2.signin
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,10 +11,9 @@ import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import kotlinclass.leminh.kotlin_week2.listrestaurant.ListRestaurantActivity
 import kotlinclass.leminh.kotlin_week2.R
 import kotlinclass.leminh.kotlin_week2.databinding.FragmentSigninBinding
-import kotlinclass.leminh.kotlin_week2.listrestaurant.ListRestaurantFramgment
+import kotlinclass.leminh.kotlin_week2.listrestaurant.ListFilmFramgment
 import kotlinclass.leminh.kotlin_week2.signup.SignupFragment
 import kotlinx.android.synthetic.main.fragment_signin.*
 
@@ -67,7 +65,7 @@ class LoginFragment : Fragment() {
 //        startActivity(intent)
         parentFragmentManager.commit {
             setReorderingAllowed(true)
-            replace<ListRestaurantFramgment>(R.id.fg_content)
+            replace<ListFilmFramgment>(R.id.fg_content)
 //            addToBackStack(null)
         }
     }

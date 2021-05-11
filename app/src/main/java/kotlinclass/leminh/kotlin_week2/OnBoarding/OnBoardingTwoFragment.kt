@@ -9,6 +9,7 @@ import android.view.WindowManager
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import kotlinclass.leminh.kotlin_week2.R
@@ -31,6 +32,7 @@ class OnBoardingTwoFragment : Fragment() {
         btn_next.setOnClickListener {
             parentFragmentManager.commit {
                 setReorderingAllowed(true)
+                setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 replace<OnBoardingThreeFragment>(R.id.fg_content)
                 addToBackStack(null)
             }
