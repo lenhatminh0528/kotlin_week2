@@ -1,4 +1,4 @@
-package kotlinclass.leminh.kotlin_week2.listrestaurant
+package kotlinclass.leminh.kotlin_week2.listmovie
 
 import android.os.Bundle
 import android.view.LayoutInflater

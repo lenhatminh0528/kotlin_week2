@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import kotlinclass.leminh.kotlin_week2.R
-import kotlinclass.leminh.kotlin_week2.listrestaurant.ListFilmFramgment
+import kotlinclass.leminh.kotlin_week2.listmovie.ListFilmFramgment
 
 class OnBoardingThreeFragment : Fragment() {
     lateinit var btn_next: LinearLayout

@@ -1,15 +1,12 @@
-package kotlinclass.leminh.kotlin_week2.listrestaurant
+package kotlinclass.leminh.kotlin_week2.listmovie
 
 import android.content.Context
 import android.os.Bundle
 import android.view.*
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import de.hdodenhof.circleimageview.CircleImageView
 import kotlinclass.leminh.kotlin_week2.R
 import kotlinclass.leminh.kotlin_week2.Restaurant
 import kotlinclass.leminh.kotlin_week2.data.DataStore
@@ -75,23 +72,23 @@ class RestaurantAdapter(private var context: Context, private var list: List<Res
     RecyclerView.Adapter<RestaurantAdapter.ViewHolder>() {
     private var isLinear: Boolean = true
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tv_name: TextView
-        var tv_address: TextView
-        var image: CircleImageView
+//        var tv_name: TextView
+//        var tv_address: TextView
+//        var image: CircleImageView
         init{
-            tv_name = itemView.findViewById(R.id.tv_name)
-            tv_address = itemView.findViewById(R.id.tv_address)
-            image = itemView.findViewById(R.id.image)
+//            tv_name = itemView.findViewById(R.id.tv_name)
+//            tv_address = itemView.findViewById(R.id.tv_address)
+//            image = itemView.findViewById(R.id.image)
         }
 
         fun bind(item: Restaurant){
-            tv_address.text = item.address
-            tv_name.text =  item.name
-            Glide.with(itemView.context)
-                .load(item.avatar)
-                .centerCrop()
-                .placeholder(R.drawable.ic_baseline_image_24)
-                .into(image)
+//            tv_address.text = item.address
+//            tv_name.text =  item.name
+//            Glide.with(itemView.context)
+//                .load(item.avatar)
+//                .centerCrop()
+//                .placeholder(R.drawable.ic_baseline_image_24)
+//                .into(image)
         }
     }
 

@@ -13,7 +13,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kotlinclass.leminh.kotlin_week2.R
 import kotlinclass.leminh.kotlin_week2.databinding.FragmentSigninBinding
-import kotlinclass.leminh.kotlin_week2.listrestaurant.ListFilmFramgment
+import kotlinclass.leminh.kotlin_week2.listmovie.ListFilmFramgment
 import kotlinclass.leminh.kotlin_week2.signup.SignupFragment
 import kotlinx.android.synthetic.main.fragment_signin.*
 

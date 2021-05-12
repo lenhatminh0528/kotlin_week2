@@ -1,4 +1,4 @@
-package kotlinclass.leminh.kotlin_week2.listrestaurant
+package kotlinclass.leminh.kotlin_week2.listmovie
 
 import android.content.Context
 import androidx.fragment.app.Fragment

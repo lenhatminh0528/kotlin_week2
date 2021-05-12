@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:theme="@style/AppTheme.NoActionBar"
-            android:name=".listrestaurant.ListRestaurantActivity">
+            android:name=".listmovie.ListRestaurantActivity">
         </activity>
         <activity android:name=".OnBoarding.OnBoardingActivity"/>
         <activity android:name=".SplassScreen"
